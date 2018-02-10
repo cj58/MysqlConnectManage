@@ -1,6 +1,6 @@
 # 1 功能介绍
-    MysqlConnectManage是Linux是方便用户，记忆mysql连接信息和快速切换mysql连接到具体的数据库的一个小工具。采用shell脚本编写。
-    源码目录：https://github.com/cj58/MysqlConnectManage。
+    MysqlConnectManage是Linux是方便用户，记忆mysql连接信息和快速切换mysql连接到具体的数据库的一个小工具。
+    采用shell脚本编写。源码目录：https://github.com/cj58/MysqlConnectManage。
 
 # 2 安装MysqlConnectManage
 ```

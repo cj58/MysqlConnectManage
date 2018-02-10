@@ -44,7 +44,8 @@ sh mysql_connect.sh 脚本上带上你想要连接的数据数字比如：sh mys
 ![快速连接](https://github.com/cj58/img/blob/master/MysqlConnectManage/fastchoice.png)
 
 ## 3.4 批量导入连接信息
-每次新建一个连接都会保存在脚本mysql_connect_config.cnf中。可以直接便捷这个文件/home/dev/svn/avatar/MysqlConnectManage/mysql_connect_config.cnf。输入你系统的连接的数据库连接信息。
+每次新建一个连接都会保存在脚本mysql_connect_config.cnf中。可以直接编辑这个文件/home/dev/svn/avatar/MysqlConnectManage/mysql_connect_config.cnf。批量输入你系统的连接的数据库连接信息。
+在3.2中就可以选择了。
 ```
 mysql -h ffffccoasdfasdfuntdev1-db -P 3306 -uhxxxxxf -pxxxx.com
 mysql -h recoasdfasdfverdb1-dev.bj1.xxxx.net -P 3306 -uhxxxxxf -pxxxx.com

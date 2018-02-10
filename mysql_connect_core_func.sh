@@ -131,7 +131,7 @@ function addNewConnect()
     local connectStr='mysql -h '${host}' -P '${port}' -u'${user}' -p'${password}
 
     echo ${connectStr} >> ${configFile} 
-    echoGreen "[INFO] add ${connectStr} complete"
+    echoGreen "[INFO] Add ${connectStr} complete."
 
     doMysqlConnect "${connectStr}"
     return 0;

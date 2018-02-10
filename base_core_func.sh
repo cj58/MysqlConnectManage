@@ -1,14 +1,14 @@
 #!/bin/sh
 # base_core_func.sh
 # 
-# 基础核心函数
+# base_core_func
 #
 # @link https://github.com/cj58/MysqlConnectManage
 # @author cj
 # @copyright 2018 cj
 #
 
-##! @TODO: 去掉字符串前后空格
+##! @TODO: trimStr
 ##! @IN: $1 => str
 ##! @OUT: val string 
 function trimStr()
@@ -24,7 +24,7 @@ function trimStr()
     return 0;
 }
 
-##! @TODO: 设置配置文件key=val
+##! @TODO: set config key=val
 ##! @IN: $1 => configFile
 ##! @IN: $2 => key
 ##! @IN: $3 => val
@@ -35,12 +35,12 @@ function setConfig()
     local key=$2;
     local val=$3;
     if [[ -z ${configFile} || -z ${key} || -z ${val} ]];then
-        echo '[ERROR],参数不能为空 in setConfig()' 
+        echo '[ERROR],config can not be empty in setConfig()' 
         return 1;
     fi
 
     local newLine="$key=${val}"
-    #文件不存在
+    #file not exist
     if [ ! -f ${configFile} ];then
         echo $newLine >> $configFile;
         return 0;
@@ -48,14 +48,14 @@ function setConfig()
 
     local tmpNum=$(sed -n "/$key\=/=" $configFile | head -n 1)
     if [[ $tmpNum -gt 0 ]];then
-        #替换这一行
+        #replace this line 
         sed -i "${tmpNum}s/.*/${newLine}/" $configFile 
     else
         echo $newLine >> $configFile;
     fi
 }
 
-##! @TODO: 读取配置文件key
+##! @TODO: read confifg by key
 ##! @IN: $1 => configFile
 ##! @IN: $2 => key
 ##! @OUT: val string 
@@ -65,10 +65,10 @@ function getConfig()
     local key=$2;
     local val='';
     if [[ -z ${configFile} || -z ${key} ]];then
-        echo '[ERROR],参数不能为空 in getConfig()' 
+        echo '[ERROR],config can not be empty in getConfig()' 
         return 1;
     fi
-    #文件不存在
+    #file not exist
     if [ ! -f ${configFile} ];then
         echo $val;
         return 0;
@@ -83,7 +83,7 @@ function getConfig()
 }
 
 
-##! @TODO: 打印绿色
+##! @TODO: echoGreen
 ##! @IN: $* => string
 ##! @OUT: void
 function echoGreen() 
@@ -91,7 +91,7 @@ function echoGreen()
     echo -e "\\033[0;32m $* \\033[0;39m"
 }
 
-##! @TODO: 打印红色
+##! @TODO: echoRed
 ##! @IN: $* => string
 ##! @OUT: void
 function echoRed() 
@@ -99,7 +99,7 @@ function echoRed()
     echo -e "\033[31m $* \033[0m"
 }
 
-##! @TODO: 打印黄色
+##! @TODO: echoYellow
 ##! @IN: $* => string
 ##! @OUT: void
 function echoYellow() 
@@ -107,7 +107,7 @@ function echoYellow()
     echo -e "\033[33m $* \033[0m"
 }
 
-##! @TODO: 打印错误并且退出
+##! @TODO: errorMsg
 ##! @IN: $* => string
 ##! @OUT: void
 function errorMsg() 

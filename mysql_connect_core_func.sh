@@ -114,11 +114,11 @@ function addNewConnect()
     local user='';
     local password='';
 
-    echo 'add New Connect:';
-    read -p "  database Host or IP(example:weihu1-db.bj1.xxx.net):" host
-    read -p "  port(example:3306):" port
-    read -p "  user(example:root):" user
-    read -p "  password(example:123456):" password
+    echo 'Add new database connect:';
+    read -p "  Host or IP(example:weihu1-db.bj1.xxx.net):" host
+    read -p "  Port(example:3306):" port
+    read -p "  User(example:root):" user
+    read -p "  Password(example:123456):" password
     host=$(trimStr "${host}")
     port=$(trimStr "${port}")
     user=$(trimStr "${user}")

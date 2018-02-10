@@ -13,7 +13,7 @@
 function printHelp()
 {
     echoYellow '===============================================================================';
-    echoYellow '# Help Document：https://github.com/cj58/MysqlConnectManage #';
+    echoYellow '# Help Document:https://github.com/cj58/MysqlConnectManage #';
     echoYellow '===============================================================================';
     echoYellow '';
 }
@@ -114,7 +114,7 @@ function addNewConnect()
     local user='';
     local password='';
 
-    echo '';
+    echo 'add New Connect:';
     read -p "  database Host or IP(example:weihu1-db.bj1.xxx.net):" host
     read -p "  port(example:3306):" port
     read -p "  user(example:root):" user

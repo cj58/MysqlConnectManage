@@ -25,7 +25,7 @@
 # sh mysql_connect.sh 
 ```
 输入你系统连接的数据库主机或者IP(Host or IP)，端口(Port)，用户名(User)，密码(Password)。
-![新建立一个连接](http://img.blog.csdn.net/20180210165409273?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvQ2xldmVyQ29kZQ==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70)
+![新建立一个连接](https://github.com/cj58/img/blob/master/MysqlConnectManage/newconn.png)
 
 ## 3.2 选择一个已有数据库连接
 ```bash
@@ -33,7 +33,7 @@
 # sh mysql_connect.sh 
 ```
 如果输入0，这时候会走3.1 新建一个数据库连接流程。如果输入1，会直接连接这个数据库。
-![选择一个已有数据连接](http://img.blog.csdn.net/20180210165555229?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvQ2xldmVyQ29kZQ==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70)
+![选择一个已有数据连接](https://github.com/cj58/img/blob/master/MysqlConnectManage/choice.png)
 
 ## 3.3 快速进入一个已有数据库连接
 ```bash
@@ -41,4 +41,4 @@
 # sh mysql_connect.sh 1
 ```
 sh mysql_connect.sh 脚本上带上你想要连接的数据数字比如：sh mysql_connect.sh 1，则会快速连接1对应的数据信息。
-![快速连接](http://img.blog.csdn.net/20180210165726618?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvQ2xldmVyQ29kZQ==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70)
+![快速连接](https://github.com/cj58/img/blob/master/MysqlConnectManage/fastchoice.png)
